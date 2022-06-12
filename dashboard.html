@@ -3,10 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="sidebar">
+    <div class="logo-details">
+        <img class="logo" src="img/caminotv.jpg" alt="Camino Logo">
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a href="#" class="active">
+                <i class='bx bx-grid-alt'></i>
+                <span class="links_name">Dashboard</span>
+            </a>
+        </li>
+    </ul>
+</div>
 
-    <script src="websocket/websocket.js"></script>
+<section class="home-section">
+    <nav>
+        <div class="sidebar-button">
+            <span class="dashboard">Panneau de contrôle</span>
+        </div>
+    </nav>
+
+    <div class="home-content">
+        <div class="overview-boxes">
+            <!-- les differentes box -->
+
+            <!-- ELEMENT 1 -->
+            <div class="box">
+                <div class="right-side">
+                    <div class="item">Item 1</div>
+                    <div class="gestion">Boîte de gestion</div>
+                    <div class="titre">Titre de l'élement 1</div>
+                    <input class="input" type="text" id="nameEl1" name="name" required
+                           minlength="4" maxlength="8" size="20">
+                    <div class="afficheEl"> Afficher l'élement 1
+                        <!-- switch button 1 -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ELEMENT 2 -->
+            <div class="box">
+                <div class="right-side">
+                    <div class="item">Item 2</div>
+                    <div class="gestion">Boîte de gestion</div>
+                    <div class="titre">Titre de l'élement 3</div>
+                    <input class="input" type="text" id="nameEl2" name="name" required
+                           minlength="4" maxlength="8" size="20">
+                    <div class="afficheEl"> Afficher l'élement 1
+                        <!-- switch button 1 -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ELEMENT 3 -->
+            <div class="box">
+                <div class="right-side">
+                    <div class="item">Item 2</div>
+                    <div class="gestion">Boîte de gestion</div>
+                    <div class="titre">Titre de l'élement 3</div>
+                    <input class="input" type="text" id="nameEl3" name="name" required
+                           minlength="4" maxlength="8" size="20">
+                    <div class="afficheEl"> Afficher l'élement 3
+                        <!-- switch button -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script src="websocket/websocket.js"></script>
 </body>
 </html>
