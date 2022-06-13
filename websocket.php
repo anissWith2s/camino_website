@@ -27,14 +27,13 @@ class WebSocket
         socket_listen($socket);
 
         $this->clients = array();
-        $this->waitClients();
+        $this->process();
     }
 
     /**
      * @throws Exception
      */
-    public function waitClients()
-    {
+    public function process() {
         while (true) {
             $client = socket_accept($this->socket);
             if ($client === false) {
@@ -43,7 +42,6 @@ class WebSocket
             $this->clients[] = $client;
         }
     }
-
 }
 /*
 $request = socket_read($client, 5000);
