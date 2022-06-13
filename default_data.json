@@ -1,0 +1,17 @@
+[
+  {
+    "item": "Item 1",
+    "title":"Titre 1",
+    "show" : true
+  },
+  {
+    "item": "Item 2",
+    "title": "Titre 2",
+    "show": true
+  },
+  {
+      "item": "Item 3",
+      "title": "Titre 3",
+      "show": false
+  }
+]
