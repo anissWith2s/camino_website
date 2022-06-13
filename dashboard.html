@@ -14,7 +14,6 @@
     <ul class="nav-links">
         <li>
             <a href="#" class="active">
-                <i class='bx bx-grid-alt'></i>
                 <span class="links_name">Dashboard</span>
             </a>
         </li>
@@ -23,7 +22,7 @@
 
 <section class="home-section">
     <nav>
-        <div class="sidebar-button">
+        <div class="sidebar-control">
             <span class="dashboard">Panneau de contrôle</span>
         </div>
     </nav>
@@ -39,13 +38,16 @@
                     <div class="gestion">Boîte de gestion</div>
                     <div class="titre">Titre de l'élement 1</div>
                     <input class="input" type="text" id="nameEl1" name="name" required
-                           minlength="4" maxlength="8" size="20">
-                    <div class="afficheEl"> Afficher l'élement 1
+                           minlength="4" size="20">
+                    <button class="favorite styled" type="button"> OK</button>
+                    <div class="afficheEl">
+                        <div>Afficher l'élement 1</div>
                         <!-- switch button 1 -->
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
+                        <div class="button r center" id="button-1">
+                            <input type="checkbox" class="checkbox">
+                            <div class="knobs"></div>
+                            <div class="layer"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,13 +59,15 @@
                     <div class="gestion">Boîte de gestion</div>
                     <div class="titre">Titre de l'élement 3</div>
                     <input class="input" type="text" id="nameEl2" name="name" required
-                           minlength="4" maxlength="8" size="20">
+                           minlength="4" size="20">
+                    <button class="favorite styled" type="button" id="ok"> OK</button>
                     <div class="afficheEl"> Afficher l'élement 1
                         <!-- switch button 1 -->
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
+                        <div class="button r center" id="button-1">
+                            <input type="checkbox" class="checkbox">
+                            <div class="knobs"></div>
+                            <div class="layer"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,13 +79,15 @@
                     <div class="gestion">Boîte de gestion</div>
                     <div class="titre">Titre de l'élement 3</div>
                     <input class="input" type="text" id="nameEl3" name="name" required
-                           minlength="4" maxlength="8" size="20">
+                           minlength="4" size="20">
+                    <button onclick="" class="style-button" type="button"> OK</button>
                     <div class="afficheEl"> Afficher l'élement 3
                         <!-- switch button -->
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
+                        <div class="button r center" id="button-1">
+                            <input type="checkbox" class="checkbox">
+                            <div class="knobs"></div>
+                            <div class="layer"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -90,6 +96,6 @@
     </div>
 </section>
 
-<script src="script.js"></script>
+<script src="scripts/dashboard.js"></script>
 </body>
 </html>

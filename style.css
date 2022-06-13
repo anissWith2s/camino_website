@@ -16,9 +16,6 @@
     transition: all 0.5s ease;
 }
 
-.sidebar.active{
-    width: 60px;
-}
 
 .sidebar .logo-details{
     height: 80px;
@@ -27,60 +24,46 @@
 }
 
 
-.sidebar .logo-details i{
-    font-size: 28px;
-    font-weight: 500;
-    color: #fff;
-    min-width: 60px;
-    text-align: center
-}
-
 .sidebar .logo-details .logo{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100px;
     height: 100px;
-    border-color: red white;
 }
 
-.sidebar .logo-details .logo_name{
-    color: #fff;
-    font-size: 24px;
-    font-weight: 500;
-}
 
 .sidebar .nav-links{
     margin-top: 10px;
+    width:100%;
 }
 
 .sidebar .nav-links li{
     position: relative;
     list-style: none;
-    height: 50px;
+    width:100%;
+    transition: all 0.4s ease;
 }
 
 .sidebar .nav-links li a{
-    height: 100%;
-    width: 100%;
+    display:inline-block;
     align-items: center;
     text-decoration: none;
-    transition: all 0.4s ease;
+    width:100%;
 }
 
 /* .sidebar .nav-links li a.active{
     background: #081D45;
 } */
 
-.sidebar .nav-links li a:hover{
-    background: #081D45;
+.sidebar .nav-links li:hover{
+    background-color: white;
 }
-
-.sidebar .nav-links li i{
-    min-width: 60px;
-    text-align: center;
-    font-size: 18px;
-    color: #fff;
+.sidebar .nav-links li a span {
+    transition:color 0.4s;
+}
+.sidebar .nav-links li:hover a span {
+    color:black;
 }
 
 .sidebar .nav-links li a .links_name{
@@ -91,17 +74,14 @@
     /**color: #A4B4F9;**/
 }
 
-.sidebar .nav-links .log_out{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
 .sidebar-button .dashboard {
     color: #878585
 }
+.sidebar-button .dashboard:hover {
+    background-color: red
+}
 
-.sidebar-button{
+.sidebar-control{
     background-color: white;
 }
 
@@ -114,7 +94,7 @@
     transition: all 0.5s ease;
 }
 
-.home-section nav .sidebar-button{
+.home-section nav .sidebar-control{
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -130,22 +110,24 @@
     padding-top: 104px;
 }
 .home-content .overview-boxes{
-    display: flex;
+    display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 0 20px;
     margin-bottom: 26px;
 }
 .overview-boxes .box{
-    display: flex;
+    display: inline-block;
     align-items: center;
-    width: calc(190% / 4 - 15px);
+    width: 500px;
     background: #fff;
     padding: 15px 14px;
     border-radius: 12px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     margin-bottom: 40px;
+    margin-right: 40px;
+    margin-left:40px;
 }
 
 
@@ -238,19 +220,36 @@ input:checked + .slider:before {
     color: grey;
 }
 
+#button-1 .knobs:before{content: '';position: absolute;top: 4px;left: 4px;width: 20px;height: 10px;color: #fff;font-size: 10px;font-weight: bold;text-align: center;line-height: 1;padding: 9px 4px;background-color: #fff;border-radius: 50%;transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.35), 0 10px 10px -5px rgba(0, 0, 0, 0.20);}
+#button-1 .checkbox:checked + .knobs:before{content: '';left: 32px;background-color: #fff;}
+#button-1 .checkbox:checked ~ .layer{background-color: #17c2bd;}
+#button-1 .knobs, #button-1 .knobs:before, #button-1 .layer{transition: 0.3s ease all;}
+.knobs, .layer{position: absolute;top: 0;right: 0;bottom: 0;left: 0;}
+.button{position: relative;top: 50%;width: 65px;height: 36px;margin: -20px auto 0 auto;overflow: hidden;margin: 0;}
+.button.r, .button.r .layer{border-radius: 100px;}
+.checkbox{position: relative;width: 100%;height: 100%;padding: 0;margin: 0;opacity: 0;cursor: pointer;z-index: 3;}
+.knobs{z-index: 2;}
+.layer{width: 100%;background-color: #d3d3d3;transition: 0.3s ease all;z-index: 1;}
+
 .box .right-side .input{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
-    width: 500px;
+    width: 90%;
 }
 
 .box .right-side .afficheEl{
+    position:relative;
+    width:100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 20px;
     color: black;
 }
 
+.box .right-side .afficheEl div {
+}
+.box .right-side {
+    width:100%;
+}
